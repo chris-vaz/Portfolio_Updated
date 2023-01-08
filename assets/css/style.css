@@ -238,6 +238,16 @@ body.nav-active {
   letter-spacing: 2px;
 }
 
+.section-subtitle2 {
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  font-weight: var(--fw-700);
+  margin-block-end: 20px;
+  letter-spacing: 2px;
+  margin-bottom: 0;
+  margin-top: 50px;
+}
+
 .section-title {
   margin-block-end: 45px;
 }
@@ -317,6 +327,7 @@ body.nav-active {
   align-items: center;
   gap: 24px;
   margin-block-start: 40px;
+  margin-bottom: 50px;
 }
 
 .img-holder {
@@ -560,7 +571,7 @@ body.nav-active {
 
 .hero .section-text {
   margin-block: 30px;
-  color:white;
+  color: white
 }
 
 .hero .btn {
@@ -781,19 +792,6 @@ body.nav-active {
     --slider-items: 2;
   }
 
-
-
-  /**
-   * BLOG
-   */
-
-  .blog-card .card-content {
-    padding-inline: 32px;
-    gap: 32px;
-  }
-
-
-
   /**
    * FOOTER
    */
@@ -889,13 +887,6 @@ body.nav-active {
     margin-block-end: 0;
   }
 
-  /**
-   * BLOG
-   */
-
-  .blog-card .card-title {
-    --fs-4: 2.7rem;
-  }
 
   /**
    * FOOTER
@@ -971,24 +962,6 @@ body.nav-active {
   }
 
 
-
-  /**
-   * BLOG
-   */
-
-  .blog-card {
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-  }
-
-  .blog-card .card-content {
-    padding: 32px;
-  }
-
-  .blog-list li:nth-child(2n) .card-banner {
-    order: 1;
-  }
-
 }
 
 
@@ -1060,4 +1033,21 @@ body.nav-active {
     margin-block-end: 52px;
   }
 
+  .section-text2 {
+    color: white;
+  }
+
+  .section-text3 {
+    color: white;
+    margin-bottom: 25px;
+  }
+
+  #mt-change {
+    margin-top: 37px;
+  }
+
+}
+
+#service-label{
+  margin-top:67px;
 }

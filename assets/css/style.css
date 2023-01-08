@@ -1,4 +1,4 @@
-/* CUSTOM CSS FOR MY PORTFOLIO */
+/* style.css file */
 :root {
 
   /**
@@ -331,12 +331,8 @@ body.nav-active {
   object-fit: cover;
 }
 
-
-
-
-
 /*-----------------------------------*\
-  #PRELOADER
+  #PRELOADER Styles
 \*-----------------------------------*/
 
 .preloader {
@@ -383,7 +379,7 @@ body.nav-active {
 }
 
 /*-----------------------------------*\
-  #HEADER
+  #HEADER Styles
 \*-----------------------------------*/
 
 .header {
@@ -489,7 +485,7 @@ body.nav-active {
 }
 
 /*-----------------------------------*\
-  #HERO
+  #HERO Styles
 \*-----------------------------------*/
 
 .hero {
@@ -565,6 +561,502 @@ body.nav-active {
 .hero .section-text {
   margin-block: 30px;
 }
-.hero .btn{
-  margin-inline:auto;
+
+.hero .btn {
+  margin-inline: auto;
+}
+
+/*-----------------------------------*\
+  #SERVICE Styles
+\*-----------------------------------*/
+
+.service-card {
+  position: relative;
+  background-color: var(--white);
+  height: 100%;
+  padding: 60px 40px 40px;
+  transition: var(--transition-2);
+}
+
+.service-card .card-icon ion-icon {
+  color: var(--content-color, var(--raisin-black));
+  font-size: 6rem;
+  --ionicon-stroke-width: 15px;
+}
+
+.service-card .card-title {
+  color: var(--content-color, var(--raisin-black));
+  margin-block: 20px;
+}
+
+.service-card .card-text {
+  color: var(--content-color);
+}
+
+.service-card .card-number {
+  margin-inline-start: auto;
+  font-weight: var(--fw-800);
+  line-height: 0.6;
+  max-width: max-content;
+  margin-block-start: 32px;
+  -webkit-text-stroke: 1px var(--content-color, var(--black));
+  -webkit-text-fill-color: transparent;
+  opacity: 0.3;
+}
+
+.service-card:is(:hover, :focus-within) {
+  background-color: var(--raisin-black);
+  --content-color: var(--white);
+}
+
+/*-----------------------------------*\
+  #SKILLS Styles
+\*-----------------------------------*/
+
+.skills .section-text {
+  margin-block-end: 20px;
+}
+
+.skills .btn {
+  margin-block: 45px;
+}
+
+.skills-list li:not(:last-child) {
+  margin-block-end: 30px;
+}
+
+.progress-wrapper {
+  display: flex;
+  justify-content: space-between;
+  font-weight: var(--fw-700);
+  margin-block-end: 5px;
+}
+
+.progress-bg {
+  height: 6px;
+  background-color: var(--raisin-black);
+  border-radius: var(--radius-pill);
+}
+
+.progress {
+  height: inherit;
+  background-color: var(--white);
+  border-radius: inherit;
+}
+
+/*-----------------------------------*\
+  #PORTFOLIO Section styles
+\*-----------------------------------*/
+
+.portfolio .slider {
+  --item-gap: 16px;
+}
+
+.portfolio-card {
+  position: relative;
+  background-color: transparent;
+  transition: var(--cubic-ease-out);
+}
+
+.portfolio-card .img-cover {
+  transition: var(--cubic-ease-out);
+}
+
+.portfolio-card .card-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  width: 100%;
+  transform: translate(-55%, -50%);
+  opacity: 0;
+  transition: var(--cubic-ease-out);
+  z-index: 1;
+}
+
+.portfolio-card .card-text {
+  color: var(--white);
+}
+
+.portfolio-card:is(:hover, :focus-within) .img-cover {
+  opacity: 0.1;
+  transform: scale(0.95);
+}
+
+.portfolio-card:is(:hover, :focus-within) .card-content {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+/*-----------------------------------*\
+  #BLOG Section styles
+\*-----------------------------------*/
+
+.blog-list {
+  display: grid;
+  gap: 60px;
+}
+
+.blog-card {
+  display: grid;
+  gap: 40px;
+}
+
+.blog-card .card-content {
+  display: flex;
+  gap: 16px;
+  padding-inline: 16px;
+}
+
+.blog-card .time {
+  font-size: var(--fs-7);
+}
+
+.blog-card .time .span {
+  color: var(--white);
+  font-weight: var(--fw-700);
+  line-height: 0.9;
+}
+
+.blog-card .card-text {
+  margin-block: 20px;
+}
+
+/*-----------------------------------*\
+  #FOOTER Section Styles
+\*-----------------------------------*/
+
+.footer {
+  background-color: var(--raisin-black);
+  padding-block: 76px;
+}
+
+.footer .container {
+  display: grid;
+  gap: 20px;
+}
+
+.social-list {
+  display: flex;
+  gap: 8px;
+}
+
+.social-link {
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--white_a10);
+  border-radius: var(--radius-circle);
+  color: var(--white);
+  transition: var(--transition-1);
+}
+
+.social-link:is(:hover, :focus-visible) {
+  border-color: var(--white);
+}
+
+/*-----------------------------------*\
+  #MEDIA QUERIES
+\*-----------------------------------*/
+
+/**
+ * responsive for large than 575px screen
+ */
+
+@media (min-width: 575px) {
+
+  /**
+   * REUSED STYLE
+   */
+
+  .container {
+    max-width: 570px;
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  .slider {
+    --slider-items: 2;
+  }
+
+
+
+  /**
+   * BLOG
+   */
+
+  .blog-card .card-content {
+    padding-inline: 32px;
+    gap: 32px;
+  }
+
+
+
+  /**
+   * FOOTER
+   */
+
+  .footer-list-title {
+    margin-block-end: 8px;
+  }
+
+}
+
+
+/**
+ * responsive for large than 768px screen
+ */
+
+@media (min-width: 768px) {
+
+  /**
+   * CUSTOM PROPERTY
+   */
+
+  :root {
+
+    /**
+     * typography
+     */
+
+    --fs-2: 6rem;
+    --fs-3: 5.5rem;
+
+  }
+
+  /**
+   * REUSED STYLE
+   */
+
+  .container {
+    max-width: 720px;
+  }
+
+  .title-wrapper {
+    display: flex;
+    gap: 10%;
+  }
+
+  .title-wrapper .section-title {
+    margin-block-end: 0;
+  }
+
+  .title-wrapper .section-text {
+    margin-block-start: 40px;
+  }
+
+  /**
+   * HERO
+   */
+
+  .hero .container {
+    position: relative;
+  }
+
+  .hero-banner {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 55%;
+    z-index: -1;
+  }
+
+  .hero-content {
+    width: 50%;
+    margin-inline-start: auto;
+    padding-block: 10%;
+  }
+
+  .hero-title,
+  .hero-subtitle {
+    text-shadow: 2px 2px 0 var(--eerie-black);
+  }
+
+  /**
+   * SKILL
+   */
+
+  .skills-wrapper {
+    display: grid;
+    grid-template-columns: 0.8fr 1fr;
+    gap: 40px;
+  }
+
+  .skills .btn {
+    margin-block-end: 0;
+  }
+
+  /**
+   * BLOG
+   */
+
+  .blog-card .card-title {
+    --fs-4: 2.7rem;
+  }
+
+  /**
+   * FOOTER
+   */
+
+  .footer .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+
+
+/**
+ * responsive for large than 992px screen
+ */
+
+@media (min-width: 992px) {
+
+  /**
+   * CUSTOM PROPERTY
+   */
+
+  :root {
+
+    /**
+     * typography
+     */
+
+    --fs-3: 7rem;
+
+  }
+
+
+
+  /**
+   * REUSED STYLE
+   */
+
+  .container {
+    max-width: 960px;
+  }
+
+  .title-wrapper {
+    gap: 15%;
+  }
+
+  .slider {
+    --slider-items: 3;
+  }
+
+
+
+  /**
+   * HERO
+   */
+
+  .hero-subtitle {
+    --fs-8: 1.4rem;
+  }
+
+
+
+  /**
+   * SKILL
+   */
+
+  .skills .section-title {
+    max-width: 16ch;
+  }
+
+  .skills-wrapper {
+    gap: 10%;
+  }
+
+
+
+  /**
+   * BLOG
+   */
+
+  .blog-card {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .blog-card .card-content {
+    padding: 32px;
+  }
+
+  .blog-list li:nth-child(2n) .card-banner {
+    order: 1;
+  }
+
+}
+
+
+/**
+ * responsive for large than 1200px screen
+ */
+
+@media (min-width: 1200px) {
+
+  /**
+   * CUSTOM PROPERTY
+   */
+
+  :root {
+
+    /**
+     * spacing
+     */
+
+    --section-padding: 140px;
+
+  }
+
+
+
+  /**
+   * REUSED STYLE
+   */
+
+  .container {
+    max-width: 1140px;
+  }
+
+
+
+  /**
+   * HEADER
+   */
+
+  .navbar {
+    top: 0;
+    display: grid;
+    place-content: center;
+  }
+
+  .nav-toggle-btn {
+    position: relative;
+    z-index: 2;
+  }
+
+  .overlay {
+    top: 0;
+  }
+
+
+  /**
+   * HERO Styles
+   */
+
+  .hero-content {
+    width: 55%;
+  }
+
+  .hero-title {
+    word-break: normal;
+  }
+
+  .hero .section-text {
+    margin-block-end: 52px;
+  }
+
 }
